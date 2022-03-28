@@ -13,3 +13,7 @@
   (remove)="onRemove($event)"
 >
 </app-book-collection>
+
+<h4>iterator items</h4>
+
+<span *ngFor="let i of items; let ii = index"> {{ ii }} </span>

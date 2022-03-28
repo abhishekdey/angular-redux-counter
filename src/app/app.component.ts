@@ -11,6 +11,7 @@ import { GoogleBooksService } from './book-list/books.service';
 export class AppComponent {
   books$ = this.store.select(selectBooks);
   bookCollection$ = this.store.select(selectBookCollection);
+  items = [];
 
   onAdd(bookId: string) {
     this.store.dispatch(addBook({ bookId }));
@@ -23,6 +24,7 @@ export class AppComponent {
   constructor(private booksService: GoogleBooksService, private store: Store) {}
 
   ngOnInit() {
+    this.items.length = 10;
     this.booksService
       .getBooks()
       .subscribe((books) => this.store.dispatch(retrievedBookList({ books })));
