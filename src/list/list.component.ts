@@ -1,11 +1,15 @@
-import { Component, VERSION } from '@angular/core';
+import { Component, OnInit, VERSION } from '@angular/core';
 @Component({
   selector: 'my-app22',
-  template: '<div> ddkdldl dldldld dldldl dldldl. dwdw ede  </div>',
+  template: '<div> Child component </div> <my-ap2></my-ap2>',
   styleUrls: [],
 })
-export class ListComponent {
+export class ListComponent implements OnInit {
   constructor() {
-    console.log('ui.  dflelel ffff fgrfgf gdg vdfd ddfiwowowo');
+    console.log('constructor ListComponent');
+  }
+
+  ngOnInit() {
+    console.log('ngOnit ListComponent');
   }
 }
