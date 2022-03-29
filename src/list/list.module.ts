@@ -7,12 +7,17 @@ import { ListComponent } from './list.component';
     RouterModule.forChild([
       {
         path: '',
+        redirectTo: '',
+        pathMatch: 'full',
         component: ListComponent,
       },
     ]),
   ],
-  declarations: [],
-  bootstrap: [],
+  declarations: [ListComponent],
   providers: [],
 })
-export class ListModule {}
+export class ListModule {
+  constructor() {
+    console.log('dldl');
+  }
+}
