@@ -12,10 +12,13 @@ import { collectionReducer } from './state/collection.reducer';
 import { BookListComponent } from './book-list/book-list.component';
 import { BookCollectionComponent } from './book-list/book-collection.component';
 import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   imports: [
     BrowserModule,
+    CommonModule,
     FormsModule,
     HttpClientModule,
     StoreModule.forRoot({
@@ -23,6 +26,13 @@ import { HttpClientModule } from '@angular/common/http';
       books: booksReducer,
       collection: collectionReducer,
     }),
+    RouterModule.forRoot([
+      {
+        path: '',
+        loadChildren: () =>
+          import('../list/list.module').then((m) => m.ListModule),
+      },
+    ]),
   ],
   declarations: [
     AppComponent,
@@ -34,4 +44,6 @@ import { HttpClientModule } from '@angular/common/http';
   bootstrap: [AppComponent],
   providers: [],
 })
-export class AppModule {}
+export class AppModule {
+  //debugger;
+}
