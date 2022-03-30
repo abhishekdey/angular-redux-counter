@@ -22,19 +22,14 @@ export class AppComponent implements OnInit, OnChanges {
     this.store.dispatch(removeBook({ bookId }));
   }
 
-  constructor(private booksService: GoogleBooksService, private store: Store) {
-    console.log('constructor AppComponent');
-  }
+  constructor(private booksService: GoogleBooksService, private store: Store) {}
 
   ngOnInit() {
-    console.log('ngOnit AppComponent');
     this.items.length = 10;
     this.booksService
       .getBooks()
       .subscribe((books) => this.store.dispatch(retrievedBookList({ books })));
   }
 
-  ngOnChanges() {
-    console.log('ngOnChanges AppComponent ');
-  }
+  ngOnChanges() {}
 }

@@ -7,27 +7,15 @@ import { Component, Input, OnInit, VERSION } from '@angular/core';
 export class List2Component implements OnInit {
   @Input() o;
 
-  constructor() {
-    console.log('constructor List2Component');
-  }
+  constructor() {}
 
-  ngOnInit() {
-    console.log('ngOnit List2Component');
-  }
+  ngOnInit() {}
 
-  ngOnChanges() {
-    console.log('ngOnChanges List2Component ');
-  }
+  ngOnChanges() {}
 
-  ngAfterContentInit() {
-    console.log('ngAfterContentInit List2Component ');
-  }
+  ngAfterContentInit() {}
 
-  ngAfterContentChecked() {
-    console.log('ngAfterContentChecked List2Component');
-  }
+  ngAfterContentChecked() {}
 
-  ngOnDestroy() {
-    console.log('ngOnDestroy List2Component');
-  }
+  ngOnDestroy() {}
 }

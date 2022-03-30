@@ -12,11 +12,9 @@ import { List2Component } from './list2.component';
       },
     ]),
   ],
-  declarations: [ListComponent,List2Component],
+  declarations: [ListComponent, List2Component],
   providers: [],
 })
 export class ListModule {
-  constructor() {
-    console.log('dl2222dl');
-  }
+  constructor() {}
 }

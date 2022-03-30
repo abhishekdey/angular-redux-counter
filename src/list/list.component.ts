@@ -8,15 +8,9 @@ import { selectBookCollection } from '../app/state/books.selectors';
 })
 export class ListComponent implements OnInit {
   bookCollection$ = this.store.select(selectBookCollection);
-  constructor(private store: Store) {
-    console.log('constructor ListComponent');
-  }
+  constructor(private store: Store) {}
 
-  ngOnInit() {
-    console.log('ngOnit ListComponent');
-  }
+  ngOnInit() {}
 
-  ngOnChanges() {
-    console.log('ngOnChanges ListComponent ');
-  }
+  ngOnChanges() {}
 }
