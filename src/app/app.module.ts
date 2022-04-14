@@ -47,6 +47,4 @@ import { EffectsModule } from '@ngrx/effects';
   bootstrap: [AppComponent],
   providers: [],
 })
-export class AppModule {
-  debugger;
-}
+export class AppModule {}
