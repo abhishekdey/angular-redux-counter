@@ -25,6 +25,7 @@ export class AppComponent implements OnInit, OnChanges {
   constructor(private booksService: GoogleBooksService, private store: Store) {}
 
   ngOnInit() {
+    this.store.dispatch({ type: '[Movies Page] Load Movies' });
     this.items.length = 10;
     this.booksService
       .getBooks()
