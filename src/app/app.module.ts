@@ -14,8 +14,8 @@ import { BookCollectionComponent } from './book-list/book-collection.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { BookEffects } from './state/books.effects';
 import { EffectsModule } from '@ngrx/effects';
+import { BookEffects } from './state/books.effects';
 
 @NgModule({
   imports: [
