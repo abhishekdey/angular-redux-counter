@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
+import { ajax } from 'rxjs/ajax';
 import { map, mergeMap } from 'rxjs/operators';
 
 @Injectable()
@@ -9,11 +10,11 @@ export class BookEffects {
       this.actions$.pipe(
         ofType('[Movies Page] Load Movies'),
         mergeMap(() =>
-          toPromise('https://jsonplaceholder.typicode.com/todos/39').then(
-            (movies) => ({
+          ajax('https://jsonplaceholder.typicode.com/todos/35').pipe(
+            map((movies) => ({
               type: '[Movies API] Movies Loaded Success',
               payload: movies,
-            })
+            }))
           )
         )
       ),
