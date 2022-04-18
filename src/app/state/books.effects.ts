@@ -28,7 +28,7 @@ export class BookEffects {
       this.actions$.pipe(
         ofType('[Movies Page] Load Movies'),
         mergeMap(() =>
-          ajax('https://jsonplaceholder.typicode.com/todos/25').pipe(
+          ajax('https://jsonplaceholder.typicode.com/todo/59').pipe(
             map((movies) => ({
               type: '[Movies API] Movies Loaded Success',
               payload: movies,
