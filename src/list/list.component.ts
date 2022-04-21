@@ -7,7 +7,6 @@ import { selectBookCollection } from '../app/state/books.selectors';
   styleUrls: [],
 })
 export class ListComponent implements OnInit {
-  bookCollection$ = this.store.select(selectBookCollection);
   constructor(private store: Store) {}
 
   ngOnInit() {}
