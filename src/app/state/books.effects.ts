@@ -17,16 +17,17 @@ export class BookEffects {
             })
           )
         ),
-        tap((val) => console.log(val.payload)),
-        switchMap((val) =>
+        tap((movies) => console.log(movies.payload)),
+        switchMap((movies) =>
           toPromise(
-            'https://jsonplaceholder.typicode.com/users/' + val.payload.userId
-          ).then((movies) => ({
-            type: '[Movies API] Movies Loaded Success',
-            payload: movies,
+            'https://jsonplaceholder.typicode.com/users/' +
+              movies.payload.userId
+          ).then((users) => ({
+            type: '[Movies API] User Loaded Success',
+            payload: { movies: movies.payload, users },
           }))
         ),
-        tap((val) => console.log(val.payload))
+        tap((val) => console.log(val))
       ),
     {
       dispatch: false,
