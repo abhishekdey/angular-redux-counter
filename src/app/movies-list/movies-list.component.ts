@@ -3,10 +3,9 @@ import { Movies, Users } from './movies.models';
 
 @Component({
   selector: 'app-movies-list',
-  templateUrl: './movies-list.component.html',
-  styleUrls: ['./movies-list.component.css'],
+  templateUrl: './movie-list.component.html',
 })
 export class MoviesListComponent {
-  @Input() books: ReadonlyArray<Movies> = [];
+  @Input() movies: ReadonlyArray<Movies> = [];
   @Output() add = new EventEmitter<string>();
 }

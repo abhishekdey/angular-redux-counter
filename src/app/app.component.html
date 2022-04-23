@@ -1,5 +1,5 @@
 <app-my-counter></app-my-counter>
-<h2>Books55</h2>
+<h2>Books</h2>
 <app-book-list
   class="book-list"
   [books]="books$ | async"
@@ -14,8 +14,11 @@
 >
 </app-book-collection>
 
-<app-book-collection class="book-collection" [books]="movieCollection$ | async">
-</app-book-collection>
+<h2>Books</h2>
+<app-movies-list
+  class="book-collection"
+  [movies]="movieCollection$ | async"
+></app-movies-list>
 
 <h4>iterator items</h4>
 
