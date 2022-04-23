@@ -8,7 +8,6 @@ import { selectedMoviesList } from './state/movies.selectors';
 @Component({
   selector: 'my-app',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit, OnChanges {
   books$ = this.store.select(selectBooks);
