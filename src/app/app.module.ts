@@ -16,6 +16,7 @@ import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { EffectsModule } from '@ngrx/effects';
 import { BookEffects } from './state/books.effects';
+import { moviesReducer } from './state/movies.reducers';
 
 @NgModule({
   imports: [
@@ -27,6 +28,7 @@ import { BookEffects } from './state/books.effects';
       count: counterReducer,
       books: booksReducer,
       collection: collectionReducer,
+      movies: moviesReducer,
     }),
     EffectsModule.forRoot([BookEffects]),
     RouterModule.forRoot([

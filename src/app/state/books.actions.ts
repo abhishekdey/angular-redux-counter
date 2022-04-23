@@ -1,4 +1,4 @@
-import { createAction, props } from '@ngrx/store';
+import { createAction, props, defaultMemoize } from '@ngrx/store';
 import { Book } from '../book-list/books.model';
 
 export const addBook = createAction(

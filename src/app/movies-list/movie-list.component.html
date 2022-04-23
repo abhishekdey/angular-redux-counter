@@ -1,0 +1,7 @@
+<div class="book-item" *ngFor="let movie of movies">
+  <p>{{ movie.title }}</p>
+  <span> by {{ movie.userId }}</span>
+  <button (click)="remove.emit(movie.id)" data-test="remove-button">
+    Remove from Collection
+  </button>
+</div>
