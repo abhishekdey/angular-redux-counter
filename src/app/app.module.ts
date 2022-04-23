@@ -16,7 +16,8 @@ import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { EffectsModule } from '@ngrx/effects';
 import { BookEffects } from './state/books.effects';
-import { moviesReducer } from './state/movies.reducers';
+import { moviesReducer } from './state/movies.reducer';
+import { MoviesListComponent } from './movies-list/movies-list.component';
 
 @NgModule({
   imports: [
@@ -45,6 +46,7 @@ import { moviesReducer } from './state/movies.reducers';
     MyCounterComponent,
     BookListComponent,
     BookCollectionComponent,
+    MoviesListComponent,
   ],
   bootstrap: [AppComponent],
   providers: [],

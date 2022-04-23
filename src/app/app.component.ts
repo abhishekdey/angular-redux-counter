@@ -3,6 +3,7 @@ import { Store } from '@ngrx/store';
 import { selectBookCollection, selectBooks } from './state/books.selectors';
 import { retrievedBookList, addBook, removeBook } from './state/books.actions';
 import { GoogleBooksService } from './book-list/books.service';
+import { selectedMoviesList } from './state/movies.selectors';
 
 @Component({
   selector: 'my-app',
@@ -12,6 +13,7 @@ import { GoogleBooksService } from './book-list/books.service';
 export class AppComponent implements OnInit, OnChanges {
   books$ = this.store.select(selectBooks);
   bookCollection$ = this.store.select(selectBookCollection);
+  movieCollection$ = this.store.select(selectedMoviesList);
   items = [];
 
   onAdd(bookId: string) {
