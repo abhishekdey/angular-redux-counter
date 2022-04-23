@@ -13,7 +13,7 @@ import { selectedMoviesList } from './state/movies.selectors';
 export class AppComponent implements OnInit, OnChanges {
   books$ = this.store.select(selectBooks);
   bookCollection$ = this.store.select(selectBookCollection);
-  movieCollection$ = this.store.select(selectedMoviesList);
+  //movieCollection$ = this.store.select(selectedMoviesList);
   items = [];
 
   onAdd(bookId: string) {
